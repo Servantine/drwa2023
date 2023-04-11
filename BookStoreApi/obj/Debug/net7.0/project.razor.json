@@ -1,6 +1,6 @@
 {
-  "SerializedFilePath": "d:\\Ntin\\restfull\\TodoApi\\toDoApi\\obj\\Debug\\net7.0\\project.razor.json",
-  "FilePath": "d:\\Ntin\\restfull\\TodoApi\\toDoApi\\TodoApi.csproj",
+  "SerializedFilePath": "d:\\Ntin\\restfull\\TodoApi\\BookStoreApi\\obj\\Debug\\net7.0\\project.razor.json",
+  "FilePath": "d:\\Ntin\\restfull\\TodoApi\\BookStoreApi\\BookStoreApi.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "7.0",
@@ -18642,7 +18642,7 @@
     ],
     "CSharpLanguageVersion": 1100
   },
-  "RootNamespace": "TodoApi",
+  "RootNamespace": "BookStoreApi",
   "Documents": [],
   "SerializationFormat": "0.3"
 }

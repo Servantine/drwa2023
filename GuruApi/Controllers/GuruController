@@ -1,0 +1,72 @@
+using GuruApi.Models;
+using GuruApi.Services;
+using Microsoft.AspNetCore.Mvc;
+
+namespace GuruApi.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class GuruController : ControllerBase
+{
+    private readonly GuruService _guruService;
+
+    public GuruController(GuruService GuruService) =>
+        _guruService = GuruService;
+
+    [HttpGet]
+    public async Task<List<Guru>> Get() =>
+        await _guruService.GetAsync();
+
+    [HttpGet("{id:length(24)}")]
+    public async Task<ActionResult<Guru>> Get(string id)
+    {
+        var Guru = await _guruService.GetAsync(id);
+
+        if (Guru is null)
+        {
+            return NotFound();
+        }
+
+        return Guru;
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Post(Guru newBook)
+    {
+        await _guruService.CreateAsync(newBook);
+
+        return CreatedAtAction(nameof(Get), new { id = newBook.Id }, newBook);
+    }
+
+    [HttpPut("{id:length(24)}")]
+    public async Task<IActionResult> Update(string id, Guru updatedBook)
+    {
+        var Guru = await _guruService.GetAsync(id);
+
+        if (Guru is null)
+        {
+            return NotFound();
+        }
+
+        updatedBook.Id = Guru.Id;
+
+        await _guruService.UpdateAsync(id, updatedBook);
+
+        return NoContent();
+    }
+
+    [HttpDelete("{id:length(24)}")]
+    public async Task<IActionResult> Delete(string id)
+    {
+        var Guru = await _guruService.GetAsync(id);
+
+        if (Guru is null)
+        {
+            return NotFound();
+        }
+
+        await _guruService.RemoveAsync(id);
+
+        return NoContent();
+    }
+}
