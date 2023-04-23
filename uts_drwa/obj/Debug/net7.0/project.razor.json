@@ -1,6 +1,6 @@
 {
-  "SerializedFilePath": "d:\\Ntin\\restfull\\TodoApi\\toDoApi\\obj\\Debug\\net7.0\\project.razor.json",
-  "FilePath": "d:\\Ntin\\restfull\\TodoApi\\toDoApi\\TodoApi.csproj",
+  "SerializedFilePath": "d:\\Ntin\\restfull\\TodoApi\\uts_drwa\\obj\\Debug\\net7.0\\project.razor.json",
+  "FilePath": "d:\\Ntin\\restfull\\TodoApi\\uts_drwa\\uts_drwa.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "7.0",
@@ -18642,7 +18642,7 @@
     ],
     "CSharpLanguageVersion": 1100
   },
-  "RootNamespace": "TodoApi",
+  "RootNamespace": "uts_drwa",
   "Documents": [],
   "SerializationFormat": "0.3"
 }

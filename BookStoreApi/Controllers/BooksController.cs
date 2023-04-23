@@ -1,4 +1,8 @@
 using BookStoreApi.Models;
+using System.Net;
+using System.Web;
+using System.Net.Http;
+// using System.Web.Http;
 using BookStoreApi.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +12,18 @@ namespace BookStoreApi.Controllers;
 [Route("api/[controller]")]
 public class BooksController : ControllerBase
 {
+
+    public HttpResponseMessage Post(Book book){
+        if (ModelState.IsValid){
+            // Do Something
+
+            return new HttpResponseMessage(HttpStatusCode.OK);
+
+        }
+        else {
+            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+        }
+    }
     private readonly BooksService _booksService;
 
     public BooksController(BooksService booksService) =>
