@@ -9,16 +9,14 @@ public class Book
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
-    public int Id { get; set; }
-    [Required]
+    public string? Id { get; set; }
 
     [BsonElement("Name")]
     [JsonPropertyName("Name")]
     public string BookName { get; set; } = null!;
 
-    [Range(0,999)]
-    public decimal Price { get; set; }
-    
+    [Required]
+    public decimal? Price { get; set; } = null!;
 
     public string Category { get; set; } = null!;
 
