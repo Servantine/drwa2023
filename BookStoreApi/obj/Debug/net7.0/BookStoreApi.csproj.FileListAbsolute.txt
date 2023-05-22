@@ -44,3 +44,10 @@ D:\Ntin\restfull\TodoApi\BookStoreApi\obj\Debug\net7.0\refint\BookStoreApi.dll
 D:\Ntin\restfull\TodoApi\BookStoreApi\obj\Debug\net7.0\BookStoreApi.pdb
 D:\Ntin\restfull\TodoApi\BookStoreApi\obj\Debug\net7.0\BookStoreApi.genruntimeconfig.cache
 D:\Ntin\restfull\TodoApi\BookStoreApi\obj\Debug\net7.0\ref\BookStoreApi.dll
+D:\Ntin\restfull\TodoApi\BookStoreApi\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Ntin\restfull\TodoApi\BookStoreApi\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Ntin\restfull\TodoApi\BookStoreApi\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\Ntin\restfull\TodoApi\BookStoreApi\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\Ntin\restfull\TodoApi\BookStoreApi\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Ntin\restfull\TodoApi\BookStoreApi\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\Ntin\restfull\TodoApi\BookStoreApi\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll

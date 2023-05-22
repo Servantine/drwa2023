@@ -1,5 +1,6 @@
 using BookStoreApi.Models;
 using BookStoreApi.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookStoreApi.Controllers;
@@ -33,6 +34,7 @@ public class BooksController : ControllerBase
         _booksService = booksService;
 
     [HttpGet]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -41,6 +43,7 @@ public class BooksController : ControllerBase
         await _booksService.GetAsync();
 
     [HttpGet("{id:length(24)}")]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -58,6 +61,7 @@ public class BooksController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -70,6 +74,7 @@ public class BooksController : ControllerBase
     }
 
     [HttpPut("{id:length(24)}")]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -91,6 +96,7 @@ public class BooksController : ControllerBase
     }
 
     [HttpDelete("{id:length(24)}")]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
