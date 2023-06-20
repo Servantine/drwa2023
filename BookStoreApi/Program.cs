@@ -10,7 +10,23 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<BookStoreDatabaseSettings>(
     builder.Configuration.GetSection("BookStoreDatabase"));
 
+builder.Services.Configure<GuruDatabaseSettings>(
+    builder.Configuration.GetSection("GuruDatabase"));
+
+    builder.Services.Configure<KelassDatabaseSettings>(
+    builder.Configuration.GetSection("KelassDatabase"));
+
+        builder.Services.Configure<MapelDatabaseSettings>(
+    builder.Configuration.GetSection("MapelDatabase"));
+
+            builder.Services.Configure<PresensiHarianGuruuDatabaseSettings>(
+    builder.Configuration.GetSection("PresensiHarianGuruuDatabase"));
+
 builder.Services.AddSingleton<BooksService>();
+builder.Services.AddSingleton<GuruService>();
+builder.Services.AddSingleton<KelassService>();
+builder.Services.AddSingleton<MapelService>();
+builder.Services.AddSingleton<PresensiHarianGuruuService>();
 
 builder.Services.AddControllers()
     .AddJsonOptions(
